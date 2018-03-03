@@ -1,4 +1,5 @@
 <?php
+namespace LINE\Tests\LINEBot;
 use LINE\LINEBot;
 use LINE\Tests\LINEBot\Util\DummyHttpClient;
 class GetProfileTest extends \PHPUnit_Framework_TestCase
