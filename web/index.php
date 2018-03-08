@@ -9,7 +9,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];  $type=$event['type']; 
+                	$m_message = $message['text'];  $type=$message['type']; 
                     if($type == $type['text']){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
