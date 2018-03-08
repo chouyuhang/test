@@ -9,16 +9,17 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];  $type=type[0,1,2,3];
+                	$m_message = $message['text'];  $type=type[0,1,2,3];$arrlength = count($type);
                     if($m_message!=""){
+                        for($x = 0; $x < $arrlength; $x++) {
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $type
+                                'text' => $type[$x];
                             ))));
-                    }
+                    }}
                     break;           
             }
             break;
