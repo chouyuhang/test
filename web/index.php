@@ -11,7 +11,6 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];  $type=type[0];$type1=type[1];$type2=type[2];$type3=type[3];
                     if($m_message!=""){
-                        for($x = 0; $x < $arrlength; $x++) {
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -19,7 +18,7 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $type.$type1.$type2.$type3
                             ))));
-                    }}
+                    }
                     break;           
             }
             break;
