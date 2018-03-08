@@ -16,7 +16,7 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $type
+                                'text' => count($type)
                             ))));
                     }
                     break;           
