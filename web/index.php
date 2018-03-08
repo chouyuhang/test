@@ -9,7 +9,7 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];  $type=type[0,1,2,3];$arrlength = count($type);
+                	$m_message = $message['text'];  $type=type[0];$type1=type[1];$type2=type[2];$type3=type[3];
                     if($m_message!=""){
                         for($x = 0; $x < $arrlength; $x++) {
                         $client->replyMessage(array(
@@ -17,7 +17,7 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $type[$x];
+                                'text' => $type.$type1.$type2.$type3
                             ))));
                     }}
                     break;           
