@@ -9,14 +9,14 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];  $type= $message['type'];
+                	$m_message = $message['text'];$type= $message['type'];$displayName= $message['displayName'];
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => count($type)
+                                'text' => $displayName
                             ))));
                     }
                     break;           
