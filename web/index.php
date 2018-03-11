@@ -10,17 +10,13 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
-                    $profile = $res->getJSONDecodedBody();
-                    $displayName = $profile['displayName'];
-                    $statusMessage = $profile['statusMessage'];
-                    $pictureUrl = $profile['pictureUrl'];
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $displayName.$displayName1
+                                'text' => $displayName1
                             ))));
                     }
                     break;           
