@@ -10,16 +10,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
-                    
                     if($m_message!=""){
-			$a=file_get_contents('https://api.line.me/v2/bot/message/reply');
-                    	$ch = curl_init($a);
-	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		                'Authorization: Bearer {' . $channel_access_token . '}',
-	                ));
-			$json_content = curl_exec($ch);
-			curl_close($ch);
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -27,7 +18,9 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $displayName1
                             ))));
-			
+			$fp = fopen("test.txt","w");
+			fwrite($fp,'寫入的資料');
+		 	fclose($fp);
                     }
                     break;           
             }
