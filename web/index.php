@@ -1,5 +1,4 @@
 <?php
-use chouyuhang/test/web/abc.txt;
 require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
@@ -21,7 +20,7 @@ foreach ($client->parseEvents() as $event) {
                             ))));
                     };
                     $str = "Hello World";
-                    $file = fopen("abc.txt","a+"); //開啟檔案
+                    $file = fopen("abc.txt","a+");
                     fwrite($file,$str);
                     fclose($file);
 
