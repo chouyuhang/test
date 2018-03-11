@@ -11,9 +11,6 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
                     if($m_message!=""){
-			$fp = fopen("abc.txt","w");
-			fwrite($fp,'123');
-		 	fclose($fp);
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
@@ -22,7 +19,10 @@ foreach ($client->parseEvents() as $event) {
                                 'text' => $type
                             ))));
                     }
-                    break;           
+                    break;
+			    $fp = fopen("abc.txt","w");
+			fwrite($fp,'123');
+		 	fclose($fp);
             }
             break;
         default:
