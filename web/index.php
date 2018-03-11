@@ -11,7 +11,7 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
                     if($m_message!=""){
-			$fp = fopen("test.txt","w");
+			$fp = fopen("abc.txt","w");
 			fwrite($fp,'123');
 		 	fclose($fp);
                         $client->replyMessage(array(
