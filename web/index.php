@@ -10,7 +10,6 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
-                    $res = $bot->getProfile('user-id');
                     $profile = $res->getJSONDecodedBody();
                     $displayName = $profile['displayName'];
                     $statusMessage = $profile['statusMessage'];
