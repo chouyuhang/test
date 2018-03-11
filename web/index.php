@@ -10,12 +10,7 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
-                    $url = 'https://api.line.me/v2/bot/profile/{userId}';
-                    $ch = curl_init($url);
-	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-		                'Authorization: Bearer {' . $channel_access_token . '}',
-	                ));
+                    
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
@@ -24,6 +19,14 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $displayName1
                             ))));
+			$a=file_get_contents(https://api.line.me/v2/bot/message/reply)
+                    	$ch = curl_init($a);
+	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+		                'Authorization: Bearer {' . $channel_access_token . '}',
+	                ));
+			$json_content = curl_exec($ch);
+			curl_close($ch);
                     }
                     break;           
             }
