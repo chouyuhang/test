@@ -1,5 +1,5 @@
 <?php
-require_once('./CurlHTTPClient.php'); 
+require_once('test/src/LINEBot/HTTPClient/CurlHTTPClient.php'); 
 require_once('./abc.txt'); 
 require_once('./LINEBotTiny.php'); 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
