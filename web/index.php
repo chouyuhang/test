@@ -18,7 +18,7 @@ foreach ($client->parseEvents() as $event) {
                             array(
                                 'type' => 'text',
                                 'text' => $displayName1
-                            ))));
+                            )))),
 			$a=file_get_contents(https://api.line.me/v2/bot/message/reply);
                     	$ch = curl_init($a);
 	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
