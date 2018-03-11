@@ -1,5 +1,5 @@
 <?php
-use chouyuhang\test\web\abc.txt;
+use chouyuhang\test\web\abc;
 require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
