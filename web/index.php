@@ -18,7 +18,12 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $displayName1
                             ))));
-                    }
+                    };
+                    $str = "Hello World";
+                    $file = fopen("test.xml","a+"); //開啟檔案
+                    fwrite($file,$str);
+                    fclose($file);
+
                     break;
             }
             break;
