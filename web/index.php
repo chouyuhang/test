@@ -3,9 +3,6 @@ require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-		    $fp = fopen("abc.txt","w");
-			fwrite($fp,'123');
-		 	fclose($fp);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
@@ -21,6 +18,9 @@ foreach ($client->parseEvents() as $event) {
                                 'type' => 'text',
                                 'text' => $type
                             ))));
+			    		    $fp = fopen("abc.txt","w");
+			fwrite($fp,'123');
+		 	fclose($fp);
                     }
                     break;
             }
