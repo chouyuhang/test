@@ -20,11 +20,11 @@ foreach ($client->parseEvents() as $event) {
                             ))));
                     }
                     break;
-			    $fp = fopen("abc.txt","w");
-			fwrite($fp,'123');
-		 	fclose($fp);
             }
             break;
+		    $fp = fopen("abc.txt","w");
+			fwrite($fp,'123');
+		 	fclose($fp);
         default:
             error_log("Unsupporeted event type: " . $event['type']);
             break;
