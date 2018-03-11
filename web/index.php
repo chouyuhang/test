@@ -16,11 +16,8 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $type
+                                'text' => $displayName1
                             ))));
-			    		    $fp = fopen("abc.txt","w");
-			fwrite($fp,'123');
-		 	fclose($fp);
                     }
                     break;
             }
