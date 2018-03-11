@@ -12,13 +12,6 @@ foreach ($client->parseEvents() as $event) {
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
                     
                     if($m_message!=""){
-                        $client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $displayName1
-                            )))),
 			$a=file_get_contents(https://api.line.me/v2/bot/message/reply);
                     	$ch = curl_init($a);
 	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -27,6 +20,14 @@ foreach ($client->parseEvents() as $event) {
 	                ));
 			$json_content = curl_exec($ch);
 			curl_close($ch);
+                        $client->replyMessage(array(
+                        'replyToken' => $event['replyToken'],
+                        'messages' => array(
+                            array(
+                                'type' => 'text',
+                                'text' => $displayName1
+                            ))));
+			
                     }
                     break;           
             }
