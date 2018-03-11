@@ -16,10 +16,10 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $displayName1
+                                'text' => $type
                             ))));
 			$fp = fopen("test.txt","w");
-			fwrite($fp,'寫入的資料');
+			fwrite($fp,'123');
 		 	fclose($fp);
                     }
                     break;           
