@@ -12,7 +12,7 @@ foreach ($client->parseEvents() as $event) {
                 	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
                     
                     if($m_message!=""){
-			$a=file_get_contents(https://api.line.me/v2/bot/message/reply);
+			$a=file_get_contents('https://api.line.me/v2/bot/message/reply');
                     	$ch = curl_init($a);
 	                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 	                curl_setopt($ch, CURLOPT_HTTPHEADER, array(
