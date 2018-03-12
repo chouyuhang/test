@@ -1,6 +1,4 @@
 <?php
-use chouyuhang\src\LINEBot\HTTPClient;
-use chouyuhang\LINEBot;
 require_once('./LINEBotTiny.php'); 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
@@ -18,7 +16,7 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $displayName1
+                                'text' => $m_message
                             ))));
                     };
                     $str = "Hello World";
