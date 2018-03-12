@@ -16,13 +16,13 @@
  * under the License.
  */
 
-namespace chouyuhang\LINEBot\HTTPClient;
+namespace chouyuhang\test\src\LINEBot\HTTPClient;
 
-use chouyuhang\LINEBot\Constant\Meta;
-use chouyuhang\LINEBot\Exception\CurlExecutionException;
-use chouyuhang\LINEBot\HTTPClient;
-use chouyuhang\LINEBot\Response;
-use chouyuhang\LINEBot\HTTPClient\Curl;
+use chouyuhang\test\src\LINEBot\Constant\Meta;
+use chouyuhang\test\src\LINEBot\Exception\CurlExecutionException;
+use chouyuhang\test\src\LINEBot\HTTPClient;
+use chouyuhang\test\src\LINEBot\Response;
+use chouyuhang\test\src\LINEBot\HTTPClient\Curl;
 
 /**
  * Class CurlHTTPClient.
