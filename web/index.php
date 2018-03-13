@@ -6,7 +6,7 @@ require_once __DIR__ . '/../src/LINEBot/HTTPClient/CurlHTTPClient.php';
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$bot = new HTTPClient(new CurlHTTPClient($channelAccessToken), [
+$bot = new chouyuhang\test\src\LINEBot\HTTPClient(new CurlHTTPClient($channelAccessToken), [
     'channelSecret' => $channelSecret
 ]);
 
