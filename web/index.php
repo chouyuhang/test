@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../vendor/autoload.php';
 require_once('./LINEBotTiny.php');
 //require_once('/../web/LINEBotTiny.php');
 require_once __DIR__ . '/../src/LINEBot/Constant/Meta.php';
