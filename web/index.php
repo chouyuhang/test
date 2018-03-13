@@ -1,4 +1,5 @@
 <?php
+namespace chouyuhang\test\src\LINEBot;
 use chouyuhang\test\src\LINEBot\HTTPClient\CurlHTTPClient;
 require_once('./LINEBotTiny.php'); 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
