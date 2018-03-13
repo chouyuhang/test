@@ -14,5 +14,6 @@ $bot = new \chouyuhang\LINEBot($httpClient, ['channelSecret' => $channelSecret])
  //   $statusMessage = $profile['statusMessage'];
  //   $pictureUrl = $profile['pictureUrl'];
 //}
-$bot ->sendText($replyToken, "文字訊息");
+$msg = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("文字訊係");
+$bot->replyMessage($replyToken,$msg);
 
