@@ -18,12 +18,12 @@
 
 namespace chouyuhang;
 
-use chouyuhang\test\src\LINEBot\Event\Parser\EventRequestParser;
-use chouyuhang\test\src\LINEBot\HTTPClient;
-use chouyuhang\test\src\LINEBot\MessageBuilder;
-use chouyuhang\test\src\LINEBot\MessageBuilder\TextMessageBuilder;
-use chouyuhang\test\src\LINEBot\Response;
-use chouyuhang\test\src\LINEBot\SignatureValidator;
+use chouyuhang\LINEBot\Event\Parser\EventRequestParser;
+use chouyuhang\LINEBot\HTTPClient;
+use chouyuhang\LINEBot\MessageBuilder;
+use chouyuhang\LINEBot\MessageBuilder\TextMessageBuilder;
+use chouyuhang\LINEBot\Response;
+use chouyuhang\LINEBot\SignatureValidator;
 
 /**
  * A client class of LINE Messaging API.
