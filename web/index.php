@@ -1,20 +1,19 @@
 <?php
-require_once('./LINEBotTiny.php'); 
-require_once('chouyuhang/test/src/LINEBot/CurlHTTPClient.php'); 
+require_once('./LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$bot = new \chouyuhang\test\src\LINEBot(new CurlHTTPClient($channelAccessToken), [
-    'channelSecret' => $channelSecret
-]);
+//$bot = new \chouyuhang\test\src\LINEBot(new CurlHTTPClient($channelAccessToken), [
+//    'channelSecret' => $channelSecret
+//]);
 
-$res = $bot->getProfile('user-id');
-if ($res->isSucceeded()) {
-    $profile = $res->getJSONDecodedBody();
-    $displayName = $profile['displayName'];
-    $statusMessage = $profile['statusMessage'];
-    $pictureUrl = $profile['pictureUrl'];
-}
+//$res = $bot->getProfile('user-id');
+//if ($res->isSucceeded()) {
+ //   $profile = $res->getJSONDecodedBody();
+ //   $displayName = $profile['displayName'];
+ //   $statusMessage = $profile['statusMessage'];
+ //   $pictureUrl = $profile['pictureUrl'];
+//}
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
