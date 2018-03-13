@@ -15,13 +15,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-namespace chouyuhang\test\src\LINEBot\HTTPClient;
+namespace chouyuhang\LINEBot\HTTPClient;
 
-use chouyuhang\test\src\LINEBot\Constant\Meta;
-use chouyuhang\test\src\LINEBot\Exception\CurlExecutionException;
-use chouyuhang\test\src\LINEBot\HTTPClient;
-use chouyuhang\test\src\LINEBot\Response;
-use chouyuhang\test\src\LINEBot;
+use chouyuhang\LINEBot\Constant\Meta;
+use chouyuhang\LINEBot\Exception\CurlExecutionException;
+use chouyuhang\LINEBot\HTTPClient;
+use chouyuhang\LINEBot\Response;
+use chouyuhang\LINEBot;
 //use chouyuhang\test\src\LINEBot\HTTPClient\Curl;
 
 /**
