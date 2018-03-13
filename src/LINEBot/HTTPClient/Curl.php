@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace chouyuhang\test\src\LINEBot\HTTPClient;
+namespace chouyuhang\LINEBot\HTTPClient;
 
 /**
  * cURL session manager
