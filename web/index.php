@@ -2,6 +2,7 @@
 require_once('./LINEBotTiny.php');
 //require_once('/../web/LINEBotTiny.php');
 require_once __DIR__ . '/../src/LINEBot/HTTPClient/CurlHTTPClient.php';
+require_once __DIR__ . '/../src/LINEBot/HTTPClient.php';
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
