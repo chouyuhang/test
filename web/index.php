@@ -1,21 +1,20 @@
 <?php
 namespace chouyuhang\test\src\LINEBot;
-use chouyuhang\test\src\LINEBot\HTTPClient\CurlHTTPClient;
 require_once('./LINEBotTiny.php'); 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$httpClient = new CurlHTTPClient($channelAccessToken);
+$bot = new \chouyuhang\src\LINEBot(new CurlHTTPClient($channelAccessToken), [
+    'channelSecret' => $channelSecret
+]);
 
-//$httpClient = new \chouyuhang\test\src\LINEBot\HTTPClient\CurlHTTPClient('WI8f+ot/+7IJffBJATgfi1+rnNYCW+RGm1u2SRg2sdOLw2Y0+4gbdJsmh0zmUdtZNvx595o+hvI3XYeFQk66EVpl1mWwDDJOlKRecD6mc8gES9hnbAH+SOcrxw3QWmrmvQPI0WxrXMwB8EVOXPx4FwdB04t89/1O/w1cDnyilFU=');
-/*$bot = new \chouyuhang\src\LINEBot($httpClient, ['channelSecret' => 'a7e8c58d4744adbc363c42bc558db89e']);
-$response = $bot->getProfile('Ub28a7054f2aa2bfeeb103fb53ca35f32');
-if ($response->isSucceeded()) {
-    $profile = $response->getJSONDecodedBody();
-    echo $profile['displayName'];
-    echo $profile['pictureUrl'];
-    echo $profile['statusMessage'];
-}*/
+$res = $bot->getProfile('user-id');
+if ($res->isSucceeded()) {
+    $profile = $res->getJSONDecodedBody();
+    $displayName = $profile['displayName'];
+    $statusMessage = $profile['statusMessage'];
+    $pictureUrl = $profile['pictureUrl'];
+}
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
