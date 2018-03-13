@@ -21,6 +21,7 @@ use chouyuhang\test\src\LINEBot\Constant\Meta;
 use chouyuhang\test\src\LINEBot\Exception\CurlExecutionException;
 use chouyuhang\test\src\LINEBot\HTTPClient;
 use chouyuhang\test\src\LINEBot\Response;
+use chouyuhang\test\src\LINEBot;
 //use chouyuhang\test\src\LINEBot\HTTPClient\Curl;
 
 /**
