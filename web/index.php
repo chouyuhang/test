@@ -5,9 +5,9 @@ require_once('../web/LINEBotTiny.php');
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$bot = new \chouyuhang\test\src\LINEBot(new CurlHTTPClient($channelAccessToken), [
+/*$bot = new \chouyuhang\test\src\LINEBot(new CurlHTTPClient($channelAccessToken), [
     'channelSecret' => $channelSecret
-]);
+]);*/
 
 //$res = $bot->getProfile('user-id');
 //if ($res->isSucceeded()) {
