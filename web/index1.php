@@ -1,0 +1,18 @@
+<?php
+require_once __DIR__ . '/../src/LINEBot.php';
+require_once __DIR__ . '/../src/LINEBot/Constant/Meta.php';
+require_once __DIR__ . '/../src/LINEBot/HTTPClient.php';
+require_once __DIR__ . '/../src/LINEBot/HTTPClient/CurlHTTPClient.php';
+$channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
+$channelSecret = getenv('LINE_CHANNEL_SECRET');
+$httpClient = new \chouyuhang\LINEBot\HTTPClient\CurlHTTPClient($channelAccessToken);
+$bot = new \chouyuhang\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+//$res = $bot->getProfile('user-id');
+//if ($res->isSucceeded()) {
+ //   $profile = $res->getJSONDecodedBody();
+ //   $displayName = $profile['displayName'];
+ //   $statusMessage = $profile['statusMessage'];
+ //   $pictureUrl = $profile['pictureUrl'];
+//}
+$bot ->sendText($replyToken, "文字訊息");
+};
