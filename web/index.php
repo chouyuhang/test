@@ -2,15 +2,15 @@
 //require __DIR__ . '/../vendor/autoload.php';
 require_once('./LINEBotTiny.php');
 //require_once('/../web/LINEBotTiny.php');
-require_once __DIR__ . '/../src/LINEBot/Constant/Meta.php';
 require_once __DIR__ . '/../src/LINEBot.php';
+require_once __DIR__ . '/../src/LINEBot/Constant/Meta.php';
 require_once __DIR__ . '/../src/LINEBot/HTTPClient.php';
 require_once __DIR__ . '/../src/LINEBot/HTTPClient/CurlHTTPClient.php';
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
-$httpClient = new \chouyuhang\test\src\LINEBot\HTTPClient\CurlHTTPClient($channelAccessToken);
-$bot = new \chouyuhang\test\src\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$httpClient = new \chouyuhang\LINEBot\HTTPClient\CurlHTTPClient($channelAccessToken);
+$bot = new \chouyuhang\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 /*$bot = new \chouyuhang\test\src\LINEBot\HTTPClient(new CurlHTTPClient($channelAccessToken), [
     'channelSecret' => $channelSecret
 ]);*/
