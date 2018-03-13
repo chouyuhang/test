@@ -15,14 +15,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-
 namespace chouyuhang\test\src\LINEBot\HTTPClient;
 
 use chouyuhang\test\src\LINEBot\Constant\Meta;
 use chouyuhang\test\src\LINEBot\Exception\CurlExecutionException;
 use chouyuhang\test\src\LINEBot\HTTPClient;
 use chouyuhang\test\src\LINEBot\Response;
-use chouyuhang\test\src\LINEBot\HTTPClient\Curl;
+//use chouyuhang\test\src\LINEBot\HTTPClient\Curl;
 
 /**
  * Class CurlHTTPClient.
