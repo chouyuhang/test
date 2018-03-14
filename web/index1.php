@@ -27,8 +27,8 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];$type= $event['type'];$displayName1= $message['displayName'];$id=$type['user'];
-                    $res = $bot->getProfile($id);
+                	$m_message = $message['text'];$displayName1= $message['displayName'];
+                    $res = $bot->getProfile($userid);
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
