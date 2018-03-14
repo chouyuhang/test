@@ -30,6 +30,8 @@ foreach ($client->parseEvents() as $event) {
                 case 'text':
                 	$m_message = $message['text'];$displayName1= $message['displayName'];
                     $res = $bot->getProfile($userId);
+                    $profile = $res->getJSONDecodedBody();
+                    //$displayName = $profile['displayName'];
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
