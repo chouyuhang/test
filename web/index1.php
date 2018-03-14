@@ -33,7 +33,7 @@ foreach ($client->parseEvents() as $event) {
                     $profile = $res->getJSONDecodedBody();
                     $displayName1= $message['displayName'];
                     $displayName = $profile['displayName'];
-                    if($res->isSucceeded()){
+                    if($res->isSucceeded() && $m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
