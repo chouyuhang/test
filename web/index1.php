@@ -28,8 +28,8 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];
-                    $res = $bot->getProfile($userId);
+                	$m_message = $message['text'];$source=$event['source'];$id=$source['userId'];
+                    $res = $bot->getProfile($id);
                     $profile = $res->getJSONDecodedBody();
                     $displayName1= $message['displayName'];
                     $displayName = $profile['displayName'];
