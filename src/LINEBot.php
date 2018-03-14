@@ -16,14 +16,14 @@
  * under the License.
  */
 
-namespace chouyuhang;
+namespace LINE;
 
-use chouyuhang\LINEBot\Event\Parser\EventRequestParser;
-use chouyuhang\LINEBot\HTTPClient;
-use chouyuhang\LINEBot\MessageBuilder;
-use chouyuhang\LINEBot\MessageBuilder\TextMessageBuilder;
-use chouyuhang\LINEBot\Response;
-use chouyuhang\LINEBot\SignatureValidator;
+use LINE\LINEBot\Event\Parser\EventRequestParser;
+use LINE\LINEBot\HTTPClient;
+use LINE\LINEBot\MessageBuilder;
+use LINE\LINEBot\MessageBuilder\TextMessageBuilder;
+use LINE\LINEBot\Response;
+use LINE\LINEBot\SignatureValidator;
 
 /**
  * A client class of LINE Messaging API.
