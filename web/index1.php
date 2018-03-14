@@ -14,8 +14,6 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 /*$bot = new \LINE\test\src\LINEBot\HTTPClient(new CurlHTTPClient($channelAccessToken), [
     'channelSecret' => $channelSecret
 ]);*/
-
-$res = $bot->getProfile('Ub28a7054f2aa2bfeeb103fb53ca35f32');
 //if ($res->isSucceeded()) {
  //   $profile = $res->getJSONDecodedBody();
  //   $displayName = $profile['displayName'];
@@ -28,7 +26,8 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];$type= $message['type'];$displayName1= $message['displayName'];
+                	$m_message = $message['text'];$type= $event['type'];$displayName1= $message['displayName'];$id=$type['user'];
+                    $res = $bot->getProfile($id);
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
