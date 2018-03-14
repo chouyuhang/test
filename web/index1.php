@@ -28,11 +28,12 @@ foreach ($client->parseEvents() as $event) {
             $message = $event['message'];
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];$displayName1= $message['displayName'];
+                	$m_message = $message['text'];
                     $res = $bot->getProfile($userId);
                     $profile = $res->getJSONDecodedBody();
+                    $displayName1= $message['displayName'];
                     $displayName = $profile['displayName'];
-                    if($m_message!=""){
+                    if($res->isSucceeded()){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
