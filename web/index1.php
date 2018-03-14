@@ -31,14 +31,14 @@ foreach ($client->parseEvents() as $event) {
                 	$m_message = $message['text'];$displayName1= $message['displayName'];
                     $res = $bot->getProfile($userId);
                     $profile = $res->getJSONDecodedBody();
-                    //$displayName = $profile['displayName'];
+                    $displayName = $profile['displayName'];
                     if($m_message!=""){
                         $client->replyMessage(array(
                         'replyToken' => $event['replyToken'],
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $m_message
+                                'text' => $m_message.$displayName
                             ))));
                     };
                     $str = "Hello World";
