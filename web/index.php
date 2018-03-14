@@ -6,8 +6,8 @@ require_once __DIR__ . '/../src/LINEBot/MessageBuilder/TextMessageBuilder.php';
 require_once __DIR__ . '/../src/LINEBot/HTTPClient/CurlHTTPClient.php';
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
-$httpClient = new \chouyuhang\LINEBot\HTTPClient\CurlHTTPClient($channelAccessToken);
-$bot = new \chouyuhang\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
+$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($channelAccessToken);
+$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 //$res = $bot->getProfile('user-id');
 //if ($res->isSucceeded()) {
  //   $profile = $res->getJSONDecodedBody();
@@ -15,6 +15,6 @@ $bot = new \chouyuhang\LINEBot($httpClient, ['channelSecret' => $channelSecret])
  //   $statusMessage = $profile['statusMessage'];
  //   $pictureUrl = $profile['pictureUrl'];
 //}
-$msg = new \chouyuhang\LINEBot\MessageBuilder\TextMessageBuilder("文字訊係");
+$msg = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder("文字訊係");
 $bot->replyMessage($replyToken,$msg);
 
