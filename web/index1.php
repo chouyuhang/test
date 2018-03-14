@@ -38,7 +38,7 @@ foreach ($client->parseEvents() as $event) {
                         'messages' => array(
                             array(
                                 'type' => 'text',
-                                'text' => $m_message.$displayName
+                                'text' => $m_message.$displayName.$displayName1
                             ))));
                     };
                     $str = "Hello World";
