@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace chouyuhang\LINEBot\Constant;
+namespace LINE\LINEBot\Constant;
 
 class Meta
 {
