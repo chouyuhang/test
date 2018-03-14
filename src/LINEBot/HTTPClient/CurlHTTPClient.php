@@ -22,7 +22,7 @@ use LINE\LINEBot\Exception\CurlExecutionException;
 use LINE\LINEBot\HTTPClient;
 use LINE\LINEBot\Response;
 use LINE\LINEBot;
-//use LINE\test\src\LINEBot\HTTPClient\Curl;
+use LINE\LINEBot\HTTPClient\Curl;
 
 /**
  * Class CurlHTTPClient.
