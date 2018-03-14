@@ -15,7 +15,7 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
     'channelSecret' => $channelSecret
 ]);*/
 
-//$res = $bot->getProfile('user-id');
+$res = $bot->getProfile('user-id');
 //if ($res->isSucceeded()) {
  //   $profile = $res->getJSONDecodedBody();
  //   $displayName = $profile['displayName'];
